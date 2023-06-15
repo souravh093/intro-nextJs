@@ -1,25 +1,19 @@
-"use client"
-
-import Link from "next/link";
+"use client";
 import "./globals.css";
-import { Inter } from "next/font/google";
-import Navbar from "@/components/Navbar";
+import { Roboto } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "900"], variable: "--font-roboto" });
 
 export const metadata = {
   title: "Next Try",
   description: "description",
 };
 
-
 const RootLayout = ({ children }) => {
-  console.log("from root layout")
+  console.log("from root layout");
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
-      </body>
+      <body className={`${roboto.variable} font-roboto`}>{children}</body>
     </html>
   );
 };

@@ -1,4 +1,6 @@
+// "use client";
 import Link from "next/link";
+// import { useRouter } from "next/navigation";
 import React from "react";
 
 export const metadata = {
@@ -30,6 +32,7 @@ const blogs = [
 ];
 
 const BlogsPage = () => {
+  // const router =useRouter()
   return (
     <div className="container mx-auto">
       {blogs.map(({ id, year, title }) => (
@@ -42,6 +45,7 @@ const BlogsPage = () => {
               title: title,
             },
           }}
+          // onClick={() => router.push(`/blogs/${year}/${id}?title=${title}`)}
         >
           {title}
         </Link>
